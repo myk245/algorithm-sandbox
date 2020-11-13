@@ -30,3 +30,18 @@ function getProductsOfAllIntsExceptAtIndex(intArray) {
 // Test solution
 let testArray = [1, 2, 6, 5, 9];
 console.log(getProductsOfAllIntsExceptAtIndex(testArray)); // [540, 270, 90, 108, 60] 
+
+
+function findDuplicateNumbers(arrayInt) {
+   let sortedArray = arrayInt.sort();
+   let duplicatesArray = [];
+
+   for (i = 0; i < sortedArray.length; i++) {
+      for (j = i + 1; j < sortedArray.length; j++) {
+         if (sortedArray[i] === sortedArray[j]) {
+            duplicatesArray.push(sortedArray[j])
+         }
+      }
+   }
+   return duplicatesArray;
+}
