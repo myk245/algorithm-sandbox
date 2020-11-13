@@ -45,3 +45,26 @@ function findDuplicateNumbers(arrayInt) {
    }
    return duplicatesArray;
 }
+
+// function findDuplicateNumbers(arrayInt) {
+//   let duplicatesArray = arrayInt.reduce((acc, currentValue, currentIndex, array) => {
+//     if(array.indexOf(currentValue) !== currentIndex && acc.indexOf(currentValue) < 0) {
+//       acc.push(currentValue); 
+//       return acc;
+//     }
+//   }, [])
+//   return duplicatesArray; 
+// }
+
+// array1=[0,2,5,9,5,3,0,0,5]
+
+// findDuplicateNumbers(array1)
+
+var input = [1, 2, 3, 1, 3, 1];
+
+var duplicates = input.reduce(function (acc, el, i, arr) {
+   if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el);
+   return acc;
+}, []);
+
+console.log(duplicates)
