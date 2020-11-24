@@ -83,3 +83,12 @@ function longestPalindromicSubstring(string) {
    }
    return string.slice(currentLongest[0], currentLongest[1]);
 }
+
+function getLongestPalindromeFrom(string, leftIndex, rightIndex) {
+   while (leftIndex >= 0 && rightIndex < string.length) {
+      if (string[leftIndex] !== string[rightIndex]) break;
+      leftIndex--;
+      rightIndex++
+   }
+   return [leftIndex + 1, rightIndex];
+}
