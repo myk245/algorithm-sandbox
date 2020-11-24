@@ -75,7 +75,7 @@ function longestPalindromicSubstring(string) {
    // of longest palindromic substring
    let currentLongest = [0, 1]
    // start at index 1
-   for (let i = 1; 1 < string.length; i++) {
+   for (let i = 1; i < string.length; i++) {
       const odd = getLongestPalindromeFrom(string, i - 1, i + 1)
       const even = getLongestPalindromeFrom(string, i - 1, i)
       const longest = odd[1] - odd[0] > even[1] - even[0] ? odd : even;
@@ -86,9 +86,10 @@ function longestPalindromicSubstring(string) {
 
 function getLongestPalindromeFrom(string, leftIndex, rightIndex) {
    while (leftIndex >= 0 && rightIndex < string.length) {
-      if (string[leftIndex] !== string[rightIndex]) break;
+      if (string[leftIndex] !== string[rightIndex])
+         break;
       leftIndex--;
-      rightIndex++
+      rightIndex++;
    }
    return [leftIndex + 1, rightIndex];
 }
