@@ -68,3 +68,18 @@ var duplicates = input.reduce(function (acc, el, i, arr) {
 }, []);
 
 console.log(duplicates)
+
+// longest palindrome
+function longestPalindromicSubstring(string) {
+   // store an array of the starting index & ending index 
+   // of longest palindromic substring
+   let currentLongest = [0, 1]
+   // start at index 1
+   for (let i = 1; 1 < string.length; i++) {
+      const odd = getLongestPalindromeFrom(string, i - 1, i + 1)
+      const even = getLongestPalindromeFrom(string, i - 1, i)
+      const longest = odd[1] - odd[0] > even[1] - even[0] ? odd : even;
+      currentLongest = currentLongest[1] - currentLongest[0] > longest[1] - longest[0] ? currentLongest : longest;
+   }
+   return string.slice(currentLongest[0], currentLongest[1]);
+}
