@@ -12,3 +12,18 @@ function twoNumberSum(array, targetSum) {
    }
    return [];
 }
+
+// loop through the array and at each index, 
+// check to see if there is a second integer 
+// that when added to the first, equals the targetSum
+function twoNumberSum(array, targetSum) {
+   for (let i = 0; i < array.length; i++) {
+      const num1 = array[i];
+      const targetMatch = targetSum - num1
+      if (array.includes(targetMatch) && targetMatch !== num1) {
+         // must be distinct integers, so targetMatch can't equal num1
+         return [num1, targetMatch]
+      }
+   }
+   return [];
+}
