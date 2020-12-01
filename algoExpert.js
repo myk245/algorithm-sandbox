@@ -48,3 +48,27 @@ function twoNumberSum(array, targetSum) {
    }
    return [];
 }
+
+// O(nlog(n)) time | O(1) space
+// sort the array in ascending order
+// have a left and right pointer at opposite ends of the array
+// add the number at the left pointer to the number at the right pointer
+// compare to targetSum -- if the sum of two numbers is less than targetSum, 
+// you know to move the left pointer to the right
+//  if the sum is more than targetSum, you know to move the right pointer to the left
+function twoNumberSum(array, targetSum) {
+   array.sort((a, b) => a - b);
+   let leftPointer = 0;
+   let rightPointer = array.length - 1;
+   while (leftPointer < rightPointer) {
+      const currentSum = array[leftPointer] + array[rightPointer];
+      if (currentSum === targetSum) {
+         return [array[leftPointer], array[rightPointer]]
+      } else if (currentSum < targetSum) {
+         leftPointer++;
+      } else if (currentSum > targetSum) {
+         rightPointer--;
+      }
+   }
+   return [];
+}
