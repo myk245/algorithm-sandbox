@@ -14,3 +14,20 @@ function isValidSubsequence(array, sequence) {
    }
    return sequenceIndex === sequence.length;
 }
+
+// O(n) time / O(1) space -- where n is the length of the main array
+// iterate through the main array and look for the first number 
+// in the potential subsequence -- if you find the first number, 
+// iterate through the array again, looking for the second integer and so on 
+function isValidSubsequence(array, sequence) {
+   let sequenceIndex = 0;
+   for (let i = 0; i < array.length; i++) {
+      if (sequenceIndex === sequence.length) {
+         break;
+      }
+      if (sequence[sequenceIndex] == array[i]) {
+         sequenceIndex++;
+      }
+   }
+   return sequenceIndex === sequence.length;
+}
