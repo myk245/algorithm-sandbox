@@ -9,6 +9,7 @@ function findThreeLargestNumbers(array) {
    return threeLargest;
 }
 
+// checking each number against each element in threeLargest array
 function updateLargest(threeLargest, num) {
    if (threeLargest[2] === null || num > threeLargest[2]) {
       shiftAndUpdate(threeLargest, num, 2);
@@ -19,7 +20,10 @@ function updateLargest(threeLargest, num) {
    }
 }
 
-// 
+// traverse the threeLargest array and at each index check
+// if the passed in index is equal to the current index 
+// if no, shift the value of the next element over to the left
+// if yes, replace the current value with the passed in number
 function shiftAndUpdate(array, num, index) {
    for (let i = 0; i <= index; i++) {
       if (i === index) {
