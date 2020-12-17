@@ -1,10 +1,22 @@
+// unicode value of a is 97
+// unicode value of z is 122
 function caesarCipherEncryptor(string, key) {
-   let originalUni = [];
+   const newLetters = [];
+   const newKey = key % 26;
 
-   for (let i = 0; i < string.length; i++) {
+   for (const letter of string) {
       // convert letter to unicode
-      originalUni.push(string.charCodeAt(i));
+      newLetters.push(getNewLetter(letter, newKey));
    }
-   return originalUni;
+   return newLetters.join('');
+}
 
+function getNewLetter(letter, key) {
+   const newLetterCode = letter.charCodeAt() + key;
+
+   if (newLetterCode <= 122) {
+      return String.fromCharCode(newLetterCode);
+   } else if (newLetterCode > 122) {
+      return String.fromCharCode(96 + (newLetterCode % 122));
+   }
 }
