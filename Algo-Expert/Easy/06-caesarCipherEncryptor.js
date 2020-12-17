@@ -1,3 +1,4 @@
+// O(n) space and time
 // unicode value of a is 97
 // unicode value of z is 122
 function caesarCipherEncryptor(string, key) {
@@ -19,4 +20,24 @@ function getNewLetter(letter, key) {
    } else if (newLetterCode > 122) {
       return String.fromCharCode(96 + (newLetterCode % 122));
    }
+}
+
+function caesarCipherEncryptor(string, key) {
+   const stringToUnicode = [];
+   // key needs to be equal to or less than 26
+   const adjustedKey = key % 26;
+   const newLetters = [];
+
+   for (const letter of string) {
+      stringToUnicode.push(letter.charCodeAt() + adjustedKey);
+   }
+
+   for (let i = 0; i < stringToUnicode.length; i++) {
+      if (stringToUnicode[i] <= 122) {
+         newLetters.push(String.fromCharCode(stringToUnicode[i]));
+      } else if (stringToUnicode[i] > 122) {
+         newLetters.push(String.fromCharCode(96 + (stringToUnicode[i] % 122)));
+      }
+   }
+   return newLetters.join('');
 }
