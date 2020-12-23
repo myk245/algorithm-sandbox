@@ -1,4 +1,4 @@
-// O(n) tiime and space
+// O(n) time and space
 function isPalindrome(string) {
    const reversedChars = [];
 
