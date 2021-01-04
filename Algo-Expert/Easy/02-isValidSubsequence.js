@@ -3,6 +3,7 @@
 // beginning with the first integer in main array, check if it is the same as the first integer in 
 // potential subsequence array; if yes, move both pointers and do the same thing; 
 // if no, move just the main array pointer
+// if we have traversed through our entire sequence, we know it is a valid subsequence
 function isValidSubsequence(array, sequence) {
    let arrayIndex = 0;
    let sequenceIndex = 0;
