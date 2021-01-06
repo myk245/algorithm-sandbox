@@ -15,3 +15,22 @@ function bubbleSort(array) {
    }
    return array;
 }
+
+function bubbleSort(array) {
+   let sorted = false;
+   let round = 0;
+
+   while (!sorted) {
+      sorted = true;
+      for (let i = 0; i < array.length - 1 - round; i++) {
+         if (array[i] > array[i + 1]) {
+            let temp = array[i];
+            array[i] = array[i + 1];
+            array[i + 1] = temp;
+            sorted = false;
+         }
+      }
+      round++;
+   }
+   return array;
+}
