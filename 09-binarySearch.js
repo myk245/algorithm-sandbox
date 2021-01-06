@@ -1,3 +1,4 @@
+// O(log(n)) time / O(1) space
 function binarySearch(array, target) {
    let leftIndex = 0;
    let rightIndex = array.length - 1;
