@@ -1,3 +1,4 @@
+// O(1) space / O(n^2) time
 function bubbleSort(array) {
    // traverse through array
    // i is equal to a complete transversal of the array
