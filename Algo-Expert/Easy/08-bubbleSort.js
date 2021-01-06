@@ -22,12 +22,14 @@ function bubbleSort(array) {
    let round = 0;
 
    while (!sorted) {
+      // tentatively set sorted to true
       sorted = true;
       for (let i = 0; i < array.length - 1 - round; i++) {
          if (array[i] > array[i + 1]) {
             let temp = array[i];
             array[i] = array[i + 1];
             array[i + 1] = temp;
+            // if number is bigger than adjacent one, the array is not sorted -- set sorted back to false
             sorted = false;
          }
       }
