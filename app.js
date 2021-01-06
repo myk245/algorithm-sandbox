@@ -100,3 +100,12 @@ function getLongestPalindromeFrom(string, leftIndex, rightIndex) {
    }
    return [leftIndex + 1, rightIndex];
 }
+
+// n is a two digit integer -- we want to get the sum of the first digit and the second digit
+function addTwoDigits(n) {
+   // split integer into an array -- convert to a string first
+   let nums = n.toString().split('');
+   // convert the string representations of the digits back into integers and add them together
+   let sum = parseInt(nums[0]) + parseInt(nums[1])
+   return sum;
+}
