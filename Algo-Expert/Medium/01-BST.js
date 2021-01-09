@@ -6,6 +6,8 @@ class BST {
       this.right = null;
    }
 
+   // Average: O(log(n)) time & space
+   // Worst: O(n) time & space
    insert(value) {
       // compare value to current node value
       if (value < this.value) {
@@ -28,6 +30,8 @@ class BST {
       return this;
    }
 
+   // Average: O(log(n)) time & space
+   // Worst: O(n) time & space
    contains(value) {
       if (value < this.value) {
          if (this.left === null) {
@@ -47,6 +51,8 @@ class BST {
       }
    }
 
+   // Average: O(log(n)) time & space
+   // Worst: O(n) time & space
    remove(value, parent = null) {
       if (value < this.value) {
          if (this.left !== null) {
