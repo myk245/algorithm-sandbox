@@ -1,3 +1,4 @@
+// Binary Search Tree
 class BST {
    constructor(value) {
       this.value = value;
@@ -44,5 +45,10 @@ class BST {
             return this.right.contains(value);
          }
       }
+   }
+
+   remove(value) {
+      // Write your code here.
+      return this;
    }
 }
