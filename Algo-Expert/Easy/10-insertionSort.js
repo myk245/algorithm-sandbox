@@ -1,3 +1,5 @@
+// Best: O(n) time / O(1) space
+// Average/Worst: O(n^2) time / O(1) space
 function insertionSort(array) {
    // we can skip index 0 since an array of 1 element is already sorted
    for (let i = 1; i < array.length; i++) {
