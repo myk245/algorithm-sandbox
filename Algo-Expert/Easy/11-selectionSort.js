@@ -1,4 +1,6 @@
-// start with a sorted and unsorted sub-list
+// O(n^2) time / O(1) space
+
+// start with a sorted and unsorted sub - list
 // sorted is initially empty
 function selectionSort(array) {
    // i will represent index of left-most number in unsorted list
