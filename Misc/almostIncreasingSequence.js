@@ -6,7 +6,8 @@ function almostIncreasingSequence(sequence) {
       if (sequence[i] <= sequence[i - 1]) {
          elementsToRemove++;
          // we know we have to remove either the num at index i or the index at i - 1 
-         // will removing sequence[i] fix the surrounding items?            // if no, we also have to check if removing sequence[i + 1] fix the surrounding items
+         // will removing sequence[i] fix the surrounding items?            
+         // if no, we also have to check if removing sequence[i + 1] fix the surrounding items
          // if no, we automatically know that it will take more than 1 element to be removed for sequence to be increasing, so return false
          if (sequence[i] <= sequence[i - 2] && sequence[i + 1] <= sequence[i - 1]) {
             return false;
