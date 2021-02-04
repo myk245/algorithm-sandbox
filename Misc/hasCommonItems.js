@@ -1,6 +1,6 @@
 // write a function that returns true or false depending on whether the two given arrays have any common items
 
-// O(n^2) time complexity
+// O(n) time complexity / O(1) space complexity
 function hasCommonItems(array1, array2) {
    // loop through array1
    for (let element of array1) {
@@ -14,7 +14,7 @@ function hasCommonItems(array1, array2) {
    return false;
 }
 
-// O(a+b) time complexity
+// O(a+b) time complexity / O(a) space complexity
 function hasCommonItems(array1, array2) {
    // loop through first array and create object where keys === items in the array
    let arrayObject = {};
@@ -34,6 +34,12 @@ function hasCommonItems(array1, array2) {
       }
    }
    return false;
+}
+
+// the some() method tests whether at least one element in the array passes the test implemented by the provided function
+// O(n) time complexity / O(1) space complexity
+function hasCommonItems(array1, array2) {
+   return array1.some(item => array2.includes(item))
 }
 
 // test cases
