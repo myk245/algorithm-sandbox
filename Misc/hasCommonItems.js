@@ -1,6 +1,6 @@
 // write a function that returns true or false depending on whether the two given arrays have any common items
 
-// O(n) time complexity / O(1) space complexity
+// O(n^2) time complexity / O(1) space complexity
 function hasCommonItems(array1, array2) {
    // loop through array1
    for (let element of array1) {
