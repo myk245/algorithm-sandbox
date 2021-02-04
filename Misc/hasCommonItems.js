@@ -1,4 +1,6 @@
 // write a function that returns true or false depending on whether the two given arrays have any common items
+
+// O(n^2) time complexity
 function hasCommonItems(array1, array2) {
    // loop through array1
    for (let element of array1) {
@@ -7,6 +9,28 @@ function hasCommonItems(array1, array2) {
          return true;
       } else {
          element++;
+      }
+   }
+   return false;
+}
+
+// O(a+b) time complexity
+function hasCommonItems(array1, array2) {
+   // loop through first array and create object where keys === items in the array
+   let arrayObject = {};
+
+   for (let i = 0; i < array1.length; i++) {
+      // if the array item at that index does not exist as a key in our created object, add it
+      if (!arrayObject[array1[i]]) {
+         const item = array1[i];
+         // set the value for this key as 'true'
+         arrayObject[item] = true;
+      }
+   }
+   // loop through second array and check if second array exists in created object
+   for (let j = 0; j < array2.length; j++) {
+      if (arrayObject[array2[j]]) {
+         return true;
       }
    }
    return false;
