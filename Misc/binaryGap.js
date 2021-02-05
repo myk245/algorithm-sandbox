@@ -6,12 +6,19 @@
 // }
 
 function solution(N) {
-   // console.log(N.toString(2))
-   // turn number into binary representation with .toString(2) method -> returns a string
-   let binaryRep = N.toString(2);
-   // set up 2 pointers
-   let leftPointer = 0;
-   let rightPointer = 0;
-   // iterate through binaryRep starting at index 0
+   let binaryRep = N.toString(2).split(''); // each element of array is a string
+   let oneCount = 0;
+   // there is only a binary gap if there is more than 1 '1' 
+   for (let i = 0; i < binaryRep.length; i++) {
+      if (binaryRep[i] === '1') {
+         oneCount++;
+      }
+   }
+   // check if oneCount is more than 1 -- if yes, proceed to find longest binary gap
+   if (oneCount > 1) {
+
+   } else {
+      return 0;
+   }
 }
 
