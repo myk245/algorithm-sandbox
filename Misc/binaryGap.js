@@ -2,16 +2,22 @@
 
 function solution(N) {
    let binaryRep = N.toString(2) // returns a string 
-   console.log(binaryRep);
    let currentGap = 0;
    let biggestGap = 0;
    // loop through the binaryRep starting from the right-most digit
-   for (let i = binaryRep.length - 1; i > 0; i--) {
+   for (let i = 0; i < binaryRep.length; i++) {
+      // the start of a binary gap has to be a '0'
       if (binaryRep[i] === '0') {
-         currentGap++
+         currentGap++;
+         // if we come upon a '1', check if if it is 
+      } else if (binaryRep[i] === '1') {
+         if (currentGap > biggestGap) {
+            biggestGap = currentGap;
+         }
+         currentGap = 0;
       }
    }
-
+   return biggestGap;
 }
 
 function solution(N) {
