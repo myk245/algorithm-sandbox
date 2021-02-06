@@ -7,8 +7,8 @@ function solution(N) {
    let biggestGap = 0;
    // loop through the binaryRep starting from the right-most digit
    for (let i = binaryRep.length - 1; i > 0; i--) {
-      if () {
-
+      if (binaryRep[i] === '0') {
+         currentGap++
       }
    }
 
