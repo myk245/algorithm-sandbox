@@ -1,5 +1,6 @@
 // write a function that given a positive integer, returns the length of its longest binary gap - return 0 if integer doesn't contain a binary gap
 
+// O(n) time 
 function solution(N) {
    let binaryRep = N.toString(2) // returns a string 
    let currentGap = 0;
