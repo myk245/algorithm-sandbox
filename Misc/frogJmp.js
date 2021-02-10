@@ -1,3 +1,4 @@
+// O(1) time & space
 function solution(X, Y, D) {
    // find difference between X and Y
    // divide the difference by 10
