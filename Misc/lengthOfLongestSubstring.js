@@ -13,7 +13,7 @@ var lengthOfLongestSubstring = function (s) {
          firstPointer++; 
       }
       set.add(s[secondPointer]);
-      // update longesrSubstringLength by comparing old value of longestSubstringLength to the length of the current substring
+      // update longestSubstringLength by comparing old value of longestSubstringLength to the length of the current substring
       longestSubstringLength = Math.max(longestSubstringLength, secondPointer - firstPointer + 1);
    }
    return longestSubstringLength;
