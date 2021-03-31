@@ -1,6 +1,8 @@
 // input: integer, n
 // output: integer, min # of steps to 1 with ops -1, /2, /3
 // constraints: n >= 1 
+
+// O(n) space / O(k^n) time
 function minStepsToOne(n) {
    
    function recurse(curr) {
