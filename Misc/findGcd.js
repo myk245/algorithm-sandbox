@@ -52,3 +52,19 @@ function findGcd(a, b) {
    // return the non zero value
    return a; 
 }
+
+// notice that we can optimize -- if a < b initially, the initial swap is taken care of in our while loop
+// FINAL SOLUTION
+function findGcd(a, b) {
+   if (a < 0) {
+      a *= -1; 
+   }
+   if (b < 0) {
+      b *= -1;
+   }
+
+   while (b > 0) {
+      [a, b] = [b, a % b];
+   }
+   return a; 
+}
