@@ -1,3 +1,4 @@
+// Given two integers, find the greatest common divisor (GCD).
 function findGcd(a, b) {
    // if inputs are negative integers, convert to positive (GCD must be positive)
    if (a < 0) {
