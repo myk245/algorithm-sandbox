@@ -34,3 +34,28 @@ var isAnagram = function (s, t) {
 
    return true;
 };
+
+var isAnagram = function (s, t) {
+   if (s.length !== t.length) {
+      return false;
+   }
+
+   let letters = {};
+
+   for (let i = 0; i < s.length; i++) {
+      if (!letters[s[i]]) {
+         letters[s[i]] = 1;
+      } else {
+         letters[s[i]] += 1;
+      }
+   }
+
+   for (let i = 0; i < t.length; i++) {
+      if (!letters[t[i]]) {
+         return false;
+      } else {
+         letters[t[i]]--;
+      }
+   }
+   return true;
+}; 
