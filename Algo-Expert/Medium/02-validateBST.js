@@ -4,6 +4,8 @@ move down from root to validate all subtrees (check if all of the subtrees' node
 do this until we reach a leaf node without any child nodes (null value)
 */
 
+// O(n) time / O(d) space where d is the depth of the tree
+
 // wrapper function
 function validateBST(node) {
    // min and max value initialized as -Inf and Inf
