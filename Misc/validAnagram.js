@@ -35,6 +35,7 @@ var isAnagram = function (s, t) {
    return true;
 };
 
+
 var isAnagram = function (s, t) {
    if (s.length !== t.length) {
       return false;
