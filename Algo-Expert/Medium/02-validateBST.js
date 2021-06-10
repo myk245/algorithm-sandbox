@@ -26,6 +26,6 @@ function validateHelper(node, minValue, maxValue) {
       return false; 
    }
 
-   // check left and right subtrees
+   // check left and right subtrees, updating the max and min values
    return validateHelper(node.left, minValue, node.value) && validateHelper(node.right, node.value, maxValue)
 }
